@@ -1,0 +1,70 @@
+From 3193aa5aa68df601119976f5a3fde67c586fc364 Mon Sep 17 00:00:00 2001
+From: DiUst <dm.ustinov90@gmail.com>
+Date: Wed, 25 Nov 2020 00:23:28 +0500
+Subject: [PATCH] remove duplicates xml
+
+---
+ etc/permissions/Android.bp |  7 -------
+ etc/sysconfig/Android.bp   | 16 +---------------
+ 2 files changed, 1 insertion(+), 22 deletions(-)
+
+diff --git a/etc/permissions/Android.bp b/etc/permissions/Android.bp
+index 75a3121..dfbb416 100644
+--- a/etc/permissions/Android.bp
++++ b/etc/permissions/Android.bp
+@@ -13,13 +13,6 @@ prebuilt_etc {
+     filename_from_src: true,
+ }
+ 
+-prebuilt_etc {
+-    name: "split_permissions_google",
+-    product_specific: true,
+-    sub_dir: "permissions",
+-    src: "split-permissions-google.xml",
+-    filename_from_src: true,
+-}
+ 
+ prebuilt_etc {
+     name: "privapp_permissions_searchlauncher",
+diff --git a/etc/sysconfig/Android.bp b/etc/sysconfig/Android.bp
+index ff2c31f..47e773d 100644
+--- a/etc/sysconfig/Android.bp
++++ b/etc/sysconfig/Android.bp
+@@ -30,13 +30,6 @@ prebuilt_etc {
+     filename_from_src: true,
+ }
+ 
+-prebuilt_etc {
+-    name: "sysconfig_google",
+-    product_specific: true,
+-    sub_dir: "sysconfig",
+-    src: "google.xml",
+-    filename_from_src: true,
+-}
+ 
+ prebuilt_etc {
+     name: "sysconfig_google_fi",
+@@ -54,13 +47,6 @@ prebuilt_etc {
+     filename_from_src: true,
+ }
+ 
+-prebuilt_etc {
+-    name: "google_hiddenapi_package_whitelist",
+-    product_specific: true,
+-    sub_dir: "sysconfig",
+-    src: "google-hiddenapi-package-whitelist.xml",
+-    filename_from_src: true,
+-}
+ 
+ prebuilt_etc {
+     name: "sysconfig_gmsexpress",
+@@ -76,4 +62,4 @@ prebuilt_etc {
+     sub_dir: "sysconfig",
+     src: "turbo.xml",
+     filename_from_src: true,
+-}
+\ No newline at end of file
++}
+-- 
+2.25.1
+

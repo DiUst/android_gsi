@@ -1,0 +1,26 @@
+From 0ac85e203e9d58b9bb488f7720644f750c4ac7f5 Mon Sep 17 00:00:00 2001
+From: DiUst <dm.ustinov90@gmail.com>
+Date: Wed, 25 Nov 2020 20:13:33 +0500
+Subject: [PATCH] Use generated kernel headers
+
+Change-Id: I5b06ed3fbbfc271652cebb905dba3a13771f682f
+---
+ Android.bp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Android.bp b/Android.bp
+index 7368369..00a17b3 100644
+--- a/Android.bp
++++ b/Android.bp
+@@ -18,7 +18,7 @@ cc_library_shared {
+         "libutils",
+     ],
+     header_libs: [
+-        "generated_kernel_headers",
++        "device_kernel_headers",
+     ],
+     product_variables: {
+         aosp: {
+-- 
+2.25.1
+
